@@ -10,25 +10,24 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11  # v4
-
-      - name: Setup PNPM
-        uses: pnpm/action-setup@a3252d19f25e9b6dfcd26d96363c7e0b9f9312cb  # v4
-        with:
-          # Mantén la versión que ya usas localmente (ajústala si tu repo la declara distinta)
-          version: 8.15.0
-          run_install: false
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65  # v4
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'pnpm'
 
-      - name: Install deps
+      # Usa Corepack para respetar "packageManager": "pnpm@8.15.0"
+      - name: Enable Corepack & pin PNPM
+        run: |
+          corepack enable
+          corepack prepare pnpm@8.15.0 --activate
+          pnpm -v
+
+      - name: Install
         run: pnpm install
 
       - name: Typecheck
