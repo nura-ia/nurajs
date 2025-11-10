@@ -233,10 +233,10 @@ importers:
   packages/devtools-lexicon:
     dependencies:
       '@nura/core':
-        specifier: '>=0.1.0'
+        specifier: '>=0.2.0'
         version: link:../core
       '@nura/plugin-voice':
-        specifier: '>=0.1.0'
+        specifier: '>=1.0.0'
         version: link:../plugin-voice
       vue:
         specifier: '>=3.3.0'
@@ -4002,6 +4002,7 @@ packages:
 
   /color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+    requiresBuild: true
 
   /color-string@1.9.1:
     resolution: {integrity: sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg==}
