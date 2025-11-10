@@ -17,9 +17,6 @@ coverage/
 # PNPM packs / artefactos locales
 .packs/
 
-# Lockfiles (si quieres repos 100% libs sin lock a nivel root)
-pnpm-lock.yaml
-
 # Editores / SO
 .vscode/
 .idea/
