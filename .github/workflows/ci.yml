@@ -24,12 +24,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'
+          cache: pnpm
 
       - name: Setup PNPM
-        uses: pnpm/setup-pnpm@v2
+        uses: pnpm/action-setup@v4
         with:
           version: 8.15.0
+          run_install: false
 
       - name: Print versions
         run: |
