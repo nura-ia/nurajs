@@ -1,4 +1,4 @@
-# @nurajs/intents
+# @nura-js/intents
 
 ## 0.2.0
 

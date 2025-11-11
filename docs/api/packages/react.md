@@ -1,13 +1,13 @@
-# @nura/react
+# @nura-js/react
 
 React adapter for Nura.js - Make your React apps AI-friendly.
 
 ## Installation
 
 \`\`\`bash
-npm install @nura/react @nura/core @nura/dom
+npm install @nura-js/react @nura-js/core @nura-js/dom
 # or
-pnpm add @nura/react @nura/core @nura/dom
+pnpm add @nura-js/react @nura-js/core @nura-js/dom
 \`\`\`
 
 ## Usage
@@ -15,7 +15,7 @@ pnpm add @nura/react @nura/core @nura/dom
 ### Setup Provider
 
 \`\`\`tsx
-import { NuraProvider } from '@nura/react'
+import { NuraProvider } from '@nura-js/react'
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
 ### Register Actions
 
 \`\`\`tsx
-import { useNuraAction } from '@nura/react'
+import { useNuraAction } from '@nura-js/react'
 
 function MyComponent() {
   useNuraAction({
@@ -47,7 +47,7 @@ function MyComponent() {
 ### Mark Elements
 
 \`\`\`tsx
-import { useNuraElement } from '@nura/react'
+import { useNuraElement } from '@nura-js/react'
 
 function Button() {
   const ref = useNuraElement<HTMLButtonElement>({
@@ -62,7 +62,7 @@ function Button() {
 ### Use Components
 
 \`\`\`tsx
-import { NuraElement, NuraButton } from '@nura/react'
+import { NuraElement, NuraButton } from '@nura-js/react'
 
 function Form() {
   return (

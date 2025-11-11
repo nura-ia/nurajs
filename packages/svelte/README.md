@@ -1,19 +1,19 @@
-# @nura/svelte
+# @nura-js/svelte
 
 Official Svelte adapter that initializes Nura.js with stores, actions, and DOM-aware components.
 
 ## Installation
 
 ```bash
-pnpm add @nura/svelte
+pnpm add @nura-js/svelte
 ```
 
 ## Usage Example
 
 ```svelte
 <script lang="ts">
-  import { initNura, NuraProvider, nuraAction } from '@nura/svelte';
-  import { defineActionSpec } from '@nura/core';
+  import { initNura, NuraProvider, nuraAction } from '@nura-js/svelte';
+  import { defineActionSpec } from '@nura-js/core';
 
   const { registry } = initNura({
     actions: [

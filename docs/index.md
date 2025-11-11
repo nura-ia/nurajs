@@ -5,7 +5,7 @@ description: "A next-generation framework that synchronizes your AI agents and u
 
 # ✨ Nura.js — The Agent-UI Bridge
 
-[![npm](https://img.shields.io/npm/v/@nura/core.svg?label=%40nura%2Fcore)](https://www.npmjs.com/package/@nura/core)
+[![npm](https://img.shields.io/npm/v/@nura-js/core.svg?label=%40nura-js%2Fcore)](https://www.npmjs.com/package/@nura-js/core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
 **Nura.js** is a next-generation toolkit that brings your **AI agents** and **UI layers** into perfect harmony.
@@ -58,7 +58,7 @@ Model intents with JSON Schema, gate them behind human or policy approvals, and 
 The client SDK unifies transport calls, intent status polling, and UI dispatching into one ergonomic API.
 
 ```ts
-import { NuraClient } from '@nura/client';
+import { NuraClient } from '@nura-js/client';
 
 const client = new NuraClient({ baseUrl: '/ai' });
 
@@ -78,9 +78,9 @@ await client.dispatch({
 - Install core + optional plugins:
 
   ```bash
-  pnpm add @nura/core
-  pnpm add @nura/plugin-voice @nura/plugin-fuzzy  # optional packages
-  pnpm add @nura/react  # or: pnpm add @nura/vue / pnpm add @nura/svelte
+  pnpm add @nura-js/core
+  pnpm add @nura-js/plugin-voice @nura-js/plugin-fuzzy  # optional packages
+  pnpm add @nura-js/react  # or: pnpm add @nura-js/vue / pnpm add @nura-js/svelte
   ```
 
 - Monorepo workflow:
@@ -94,10 +94,10 @@ await client.dispatch({
 ## 💡 Minimal Example
 
 ```ts
-import { stripWake } from '@nura/core/wake';
-import { parseNumeral } from '@nura/core/numerals';
-import { normalizeSynonyms } from '@nura/core/synonyms';
-import { ContextManager } from '@nura/core/context';
+import { stripWake } from '@nura-js/core/wake';
+import { parseNumeral } from '@nura-js/core/numerals';
+import { normalizeSynonyms } from '@nura-js/core/synonyms';
+import { ContextManager } from '@nura-js/core/context';
 
 const text = stripWake('ok nora open orders menu', {
   aliases: ['nora', 'lura', 'nula'],
@@ -119,8 +119,8 @@ const next = ctx.maybeConfirm('sí, elimínala');
 
 | Adapter | Package | Quick usage |
 | --- | --- | --- |
-| React | `@nura/react` | ```tsx
-import { NuraProvider, useNuraCommand } from '@nura/react';
+| React | `@nura-js/react` | ```tsx
+import { NuraProvider, useNuraCommand } from '@nura-js/react';
 
 export function App() {
   useNuraCommand('open-cart', ({ context }) => {
@@ -133,9 +133,9 @@ export function App() {
   );
 }
 ``` |
-| Vue 3 | `@nura/vue` | ```vue
+| Vue 3 | `@nura-js/vue` | ```vue
 <script setup lang="ts">
-import { NuraProvider } from '@nura/vue';
+import { NuraProvider } from '@nura-js/vue';
 </script>
 
 <template>
@@ -144,9 +144,9 @@ import { NuraProvider } from '@nura/vue';
   </NuraProvider>
 </template>
 ``` |
-| Svelte | `@nura/svelte` | ```svelte
+| Svelte | `@nura-js/svelte` | ```svelte
 <script lang="ts">
-  import { NuraProvider } from '@nura/svelte';
+  import { NuraProvider } from '@nura-js/svelte';
 </script>
 
 <NuraProvider>

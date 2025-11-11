@@ -4,12 +4,12 @@ Explore the full spectrum of Nura.js APIs across the core runtime, UI adapters a
 
 ## Package guides
 
-- [@nura/core](./packages/core)
-- [@nura/plugin-voice](./packages/plugin-voice)
-- [@nura/plugin-fuzzy](./packages/plugin-fuzzy)
-- [@nura/vue](./packages/vue)
-- [@nura/react](./packages/react)
-- [@nura/svelte](./packages/svelte)
+- [@nura-js/core](./packages/core)
+- [@nura-js/plugin-voice](./packages/plugin-voice)
+- [@nura-js/plugin-fuzzy](./packages/plugin-fuzzy)
+- [@nura-js/vue](./packages/vue)
+- [@nura-js/react](./packages/react)
+- [@nura-js/svelte](./packages/svelte)
 
 ## TypeDoc Reference
 

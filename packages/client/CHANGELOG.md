@@ -1,4 +1,4 @@
-# @nurajs/client
+# @nura-js/client
 
 ## 0.2.0
 
@@ -9,4 +9,4 @@
 ### Patch Changes
 
 - Updated dependencies [b9eb801]
-  - @nurajs/intents@0.2.0
+  - @nura-js/intents@0.2.0

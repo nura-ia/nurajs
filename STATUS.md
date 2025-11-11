@@ -1,9 +1,9 @@
 === STATUS.md ===
 
 ## Resumen ejecutivo
-- **P0**: El paquete opcional `@nura/devtools-lexicon` sólo exporta fuentes (`.ts`/`.vue`) sin proceso de build ni artefactos declarados, lo que impide publicarlo o consumirlo fuera de Vite/Vue SFCs. 【F:packages/devtools-lexicon/package.json†L1-L26】
-- **P0**: `@nura/core` y las utilidades DOM asumen siempre la presencia de `document`, por lo que fallan en SSR/edge a menos que el consumidor ponga guards externos. 【F:packages/core/src/index.ts†L18-L23】【F:packages/dom/src/indexer.ts†L16-L31】
-- **P1**: Cobertura de pruebas y linting desigual; los paquetes clave (`@nura/core`, `@nura/vue`) tienen comandos `test` dummy y dependen de CI genérico. 【F:packages/core/package.json†L73-L78】【F:packages/vue/package.json†L25-L31】【F:.github/workflows/ci.yml†L1-L27】
+- **P0**: El paquete opcional `@nura-js/devtools-lexicon` sólo exporta fuentes (`.ts`/`.vue`) sin proceso de build ni artefactos declarados, lo que impide publicarlo o consumirlo fuera de Vite/Vue SFCs. 【F:packages/devtools-lexicon/package.json†L1-L26】
+- **P0**: `@nura-js/core` y las utilidades DOM asumen siempre la presencia de `document`, por lo que fallan en SSR/edge a menos que el consumidor ponga guards externos. 【F:packages/core/src/index.ts†L18-L23】【F:packages/dom/src/indexer.ts†L16-L31】
+- **P1**: Cobertura de pruebas y linting desigual; los paquetes clave (`@nura-js/core`, `@nura-js/vue`) tienen comandos `test` dummy y dependen de CI genérico. 【F:packages/core/package.json†L73-L78】【F:packages/vue/package.json†L25-L31】【F:.github/workflows/ci.yml†L1-L27】
 - **P2**: Faltan métricas de rendimiento y límites automatizados para asegurar tamaños/latencias en voice intent matching y léxico. 【F:packages/plugin-voice/src/matchUtterance.ts†L30-L147】【F:packages/core/src/lexicon.ts†L19-L119】
 
 ## Mapa del repo
@@ -13,7 +13,7 @@
 
 ## Hallazgos por área
 1. **Estructura de workspaces** — ✅ Workspaces bien definidos, paquetes con `sideEffects:false` y `exports` explícitos salvo devtools. 【F:packages/core/package.json†L16-L72】【F:packages/plugin-voice/package.json†L16-L26】【F:packages/plugin-fuzzy/package.json†L16-L26】
-2. **Compilación** — ⚠️ `tsup` genera ESM + `.d.ts`; sólo `@nura/dom` ofrece CJS. Falta build en devtools y los `tsconfig` de voz/vue desactivan `declaration` (aunque `tsup --dts` lo sobreescribe). 【0167cd†L1-L10】【F:packages/dom/package.json†L16-L28】【F:packages/devtools-lexicon/package.json†L16-L26】【F:packages/plugin-voice/tsconfig.json†L1-L12】
+2. **Compilación** — ⚠️ `tsup` genera ESM + `.d.ts`; sólo `@nura-js/dom` ofrece CJS. Falta build en devtools y los `tsconfig` de voz/vue desactivan `declaration` (aunque `tsup --dts` lo sobreescribe). 【0167cd†L1-L10】【F:packages/dom/package.json†L16-L28】【F:packages/devtools-lexicon/package.json†L16-L26】【F:packages/plugin-voice/tsconfig.json†L1-L12】
 3. **API Pública** — ✅ Contratos tipados: `Nura`, `createRegistry`, `defineActionSpec`, léxico/i18n, agentes de voz, directivas Vue y utilidades fuzzy. 【F:packages/core/src/index.ts†L10-L99】【F:packages/core/src/types.ts†L5-L232】【F:packages/plugin-voice/src/index.ts†L166-L400】【F:packages/plugin-fuzzy/src/fuzzy.ts†L1-L459】【F:packages/vue/src/index.ts†L1-L263】
 4. **Pipeline de intents** — ✅ Flujo completo `specs → intents → match → act`, con parsers de entidades, ranking y despacho fallback. 【F:packages/plugin-voice/src/index.ts†L166-L358】【F:packages/plugin-voice/src/matchUtterance.ts†L30-L147】【F:packages/core/src/create-registry.ts†L181-L266】
 5. **i18n & sinónimos** — ✅ I18n con bundles/fallback y telemetría, léxico con normalización/phonetics y seeds bilingües. 【F:packages/core/src/i18n.ts†L10-L61】【F:packages/core/src/lexicon.ts†L19-L119】【F:packages/core/src/seeds/lexicon.ts†L1-L31】
@@ -30,5 +30,5 @@
 ## Riesgos / Deuda técnica y quick wins
 - Normalizar devtools: añadir `tsup`/Vite build que emita bundle ESM + tipos para evitar publicar SFC crudas. 【F:packages/devtools-lexicon/package.json†L16-L26】
 - Introducir guards condicionales (o exportar helpers no-DOM) en `Nura.start` y `DOMIndexer` para habilitar SSR/edge. 【F:packages/core/src/index.ts†L18-L23】【F:packages/dom/src/indexer.ts†L16-L179】
-- Formalizar suite de pruebas para `@nura/core`/`@nura/vue`; reutilizar fixtures de fuzzy/voice y añadir coverage threshold en CI. 【F:packages/core/package.json†L73-L78】【F:packages/vue/package.json†L25-L31】【F:.github/workflows/ci.yml†L19-L27】
+- Formalizar suite de pruebas para `@nura-js/core`/`@nura-js/vue`; reutilizar fixtures de fuzzy/voice y añadir coverage threshold en CI. 【F:packages/core/package.json†L73-L78】【F:packages/vue/package.json†L25-L31】【F:.github/workflows/ci.yml†L19-L27】
 - Añadir size/latency budgets (por ejemplo `size-limit`, métricas de ranking) y telemetría persistente para evaluar pipeline de intents en producción. 【F:packages/plugin-voice/src/matchUtterance.ts†L30-L161】【F:packages/core/src/lexicon.ts†L19-L119】

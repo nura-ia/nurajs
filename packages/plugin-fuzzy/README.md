@@ -1,17 +1,17 @@
-# @nura/plugin-fuzzy
+# @nura-js/plugin-fuzzy
 
 Fuzzy, phonetic, and token-based matching utilities shared by Nura.js and its voice tooling.
 
 ## Installation
 
 ```bash
-pnpm add @nura/plugin-fuzzy
+pnpm add @nura-js/plugin-fuzzy
 ```
 
 ## Usage Example
 
 ```ts
-import { matchFuzzy, tokenizeAndScore, compareWakeWord } from '@nura/plugin-fuzzy';
+import { matchFuzzy, tokenizeAndScore, compareWakeWord } from '@nura-js/plugin-fuzzy';
 
 const brands = ['Nura', 'Núria', 'Nero'];
 const match = matchFuzzy('nura', brands, { locale: 'es' });

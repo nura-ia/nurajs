@@ -1,4 +1,4 @@
-# @nurajs/intents
+# @nura-js/intents
 **Purpose:** Securely describe and execute AI-driven actions via JSON Intents using the IAE flow: **Intent → Approval → Execute**.
 
 ## Core API

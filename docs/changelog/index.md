@@ -9,8 +9,8 @@ follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and adheres to
 ### Added
 
 - Standardised ESLint, Prettier, and EditorConfig rules across packages.
-- Rollup build pipelines with type declarations for `@nura/core`,
-  `@nura/plugin-voice`, `@nura/plugin-fuzzy`, and `@nura/vue`.
+- Rollup build pipelines with type declarations for `@nura-js/core`,
+  `@nura-js/plugin-voice`, `@nura-js/plugin-fuzzy`, and `@nura-js/vue`.
 - Package-level README files detailing APIs, configuration, and status.
 - Typedoc configuration for generating HTML API documentation under `docs/api`.
 - `CLEANUP_REPORT.md` summarising repository-wide refactors.

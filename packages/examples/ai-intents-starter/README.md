@@ -1,6 +1,6 @@
 # AI intents starter
 
-Minimal playground for the `@nurajs/intents`, `@nurajs/transport-http`, and `@nurajs/client` bridge.
+Minimal playground for the `@nura-js/intents`, `@nura-js/transport-http`, and `@nura-js/client` bridge.
 
 ## Run locally in 2 steps
 

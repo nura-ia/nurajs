@@ -1,6 +1,6 @@
 # AI intents
 
-This recipe ties together [`@nurajs/intents`](../modules/intents.md), [`@nurajs/transport-http`](../modules/transport-http.md), and [`@nurajs/client`](../modules/client.md) to deliver AI-driven UI reactions.
+This recipe ties together [`@nura-js/intents`](../modules/intents.md), [`@nura-js/transport-http`](../modules/transport-http.md), and [`@nura-js/client`](../modules/client.md) to deliver AI-driven UI reactions.
 
 ## Common intents
 - `orders.create` – launch a creation modal, collect payload, confirm execution

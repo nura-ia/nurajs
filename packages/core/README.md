@@ -1,11 +1,11 @@
-# @nura/core
+# @nura-js/core
 
 Core runtime and linguistic utilities for Nura.js agent ↔ UI integrations.
 
 ## Installation
 
 ```bash
-pnpm add @nura/core
+pnpm add @nura-js/core
 ```
 
 ## Usage Example
@@ -20,7 +20,7 @@ import {
   detectLocale,
   parseNumeral,
   normalizeSynonyms,
-} from '@nura/core';
+} from '@nura-js/core';
 
 const registry = createRegistry({
   actions: [

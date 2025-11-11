@@ -1,17 +1,17 @@
-# @nura/dom
+# @nura-js/dom
 
 DOM indexer utilities that locate Nura verbs, scopes, and metadata directly in the browser.
 
 ## Installation
 
 ```bash
-pnpm add @nura/dom
+pnpm add @nura-js/dom
 ```
 
 ## Usage Example
 
 ```ts
-import { DOMIndexer, scanDOM } from '@nura/dom';
+import { DOMIndexer, scanDOM } from '@nura-js/dom';
 
 const indexer = new DOMIndexer({ autoScan: true });
 const indexed = indexer.getAll();
@@ -32,7 +32,7 @@ console.log(snapshot.stats.byScope.orders);
 
 - `DOMIndexerOptions` — configuration for auto-scan and observers.
 - `ScanResult` — output from `scanDOM` with stats and node collections.
-- `NuraElement` — indexed element model compatible with `@nura/core`.
+- `NuraElement` — indexed element model compatible with `@nura-js/core`.
 
 ## Additional Resources
 

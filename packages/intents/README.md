@@ -1,17 +1,17 @@
-# @nurajs/intents
+# @nura-js/intents
 
 Define, validate, and execute AI intents using Nura’s Intent → Approval → Execute (IAE) loop.
 
 ## Installation
 
 ```bash
-pnpm add @nurajs/intents
+pnpm add @nura-js/intents
 ```
 
 ## Quick Start
 
 ```ts
-import { registerType, createIntent, getIntentResult } from '@nurajs/intents'
+import { registerType, createIntent, getIntentResult } from '@nura-js/intents'
 
 registerType({
   type: 'orders.create',

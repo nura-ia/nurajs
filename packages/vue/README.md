@@ -1,19 +1,19 @@
-# @nura/vue
+# @nura-js/vue
 
 Official Vue 3 adapter that exposes directives and provide/inject helpers for the Nura.js runtime.
 
 ## Installation
 
 ```bash
-pnpm add @nura/vue
+pnpm add @nura-js/vue
 ```
 
 ## Usage Example
 
 ```ts
 import { createApp } from 'vue';
-import { Nura, createRegistry, defineActionSpec } from '@nura/core';
-import { withVue } from '@nura/vue';
+import { Nura, createRegistry, defineActionSpec } from '@nura-js/core';
+import { withVue } from '@nura-js/vue';
 import App from './App.vue';
 
 const registry = createRegistry({
@@ -36,7 +36,7 @@ createApp(App)
 
 <script setup lang="ts">
 import { inject } from 'vue';
-import { NURA_KEY } from '@nura/vue';
+import { NURA_KEY } from '@nura-js/vue';
 
 const nura = inject(NURA_KEY);
 const action = nura?.registry.actions.find('open_orders');

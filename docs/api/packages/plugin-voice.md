@@ -1,20 +1,20 @@
-# @nura/plugin-voice
+# @nura-js/plugin-voice
 
 > Voice command agent for Nura.js registries with wake-word detection and fuzzy matching.
 
 ## Installation
 
 ```bash
-pnpm add @nura/plugin-voice @nura/core
+pnpm add @nura-js/plugin-voice @nura-js/core
 # or
-yarn add @nura/plugin-voice @nura/core
+yarn add @nura-js/plugin-voice @nura-js/core
 ```
 
 ## Usage
 
 ```ts
-import { voiceAgent } from '@nura/plugin-voice'
-import { Nura, createRegistry } from '@nura/core'
+import { voiceAgent } from '@nura-js/plugin-voice'
+import { Nura, createRegistry } from '@nura-js/core'
 
 const registry = createRegistry({
   config: { app: { id: 'demo-app' } },
@@ -73,7 +73,7 @@ Key telemetry channels emitted during processing:
 
 ## Dependencies
 
-- Internal: `@nura/core`, `@nura/plugin-fuzzy`.
+- Internal: `@nura-js/core`, `@nura-js/plugin-fuzzy`.
 - External: Web Speech API (browser environments), falls back to prompt-based
   mock in development.
 

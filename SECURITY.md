@@ -12,4 +12,4 @@ Please report security issues privately to [security@nura.dev](mailto:security@n
 
 ## Supported Versions
 
-We currently provide security fixes for the latest minor release of each `@nura/*` package. Older versions may receive fixes at the maintainers’ discretion.
+We currently provide security fixes for the latest minor release of each `@nura-js/*` package. Older versions may receive fixes at the maintainers' discretion.

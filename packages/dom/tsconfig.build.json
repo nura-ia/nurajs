@@ -7,10 +7,10 @@
     "rootDir": "src",
     "baseUrl": ".",
     "paths": {
-      "@nura/core": ["../core/dist/index.d.ts"],
-      "@nura/core/*": ["../core/dist/*"],
-      "@nura/plugin-fuzzy": ["../plugin-fuzzy/dist/index.d.ts"],
-      "@nura/plugin-fuzzy/*": ["../plugin-fuzzy/dist/*"]
+      "@nura-js/core": ["../core/dist/index.d.ts"],
+      "@nura-js/core/*": ["../core/dist/*"],
+      "@nura-js/plugin-fuzzy": ["../plugin-fuzzy/dist/index.d.ts"],
+      "@nura-js/plugin-fuzzy/*": ["../plugin-fuzzy/dist/*"]
     }
   },
   "include": ["src"]

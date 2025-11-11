@@ -1,6 +1,6 @@
 # Nura.js — The Agent-UI Bridge
 
-[![npm](https://img.shields.io/npm/v/@nura/core.svg?label=%40nura%2Fcore)](https://www.npmjs.com/package/@nura/core)
+[![npm](https://img.shields.io/npm/v/@nura-js/core.svg?label=%40nura-js%2Fcore)](https://www.npmjs.com/package/@nura-js/core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
 **Nura.js** harmonizes AI agents and UI layers so teams can build interfaces that listen, understand, and act. Born from the ideals of *nur* (light) and *pneuma* (breath), it carries Billy Rojas’s vision of living, conversational software.
@@ -20,9 +20,9 @@
 Requirements: Node.js ≥ 18.18, pnpm ≥ 8.
 
 ```bash
-pnpm add @nura/core
-pnpm add @nura/plugin-voice @nura/plugin-fuzzy  # optional packages
-pnpm add @nura/react  # or: pnpm add @nura/vue / pnpm add @nura/svelte
+pnpm add @nura-js/core
+pnpm add @nura-js/plugin-voice @nura-js/plugin-fuzzy  # optional packages
+pnpm add @nura-js/react  # or: pnpm add @nura-js/vue / pnpm add @nura-js/svelte
 ```
 
 If you cloned the monorepo:
@@ -36,10 +36,10 @@ pnpm build  # or: npm run build / yarn build
 ## Minimal Example
 
 ```ts
-import { stripWake } from '@nura/core/wake';
-import { parseNumeral } from '@nura/core/numerals';
-import { normalizeSynonyms } from '@nura/core/synonyms';
-import { ContextManager } from '@nura/core/context';
+import { stripWake } from '@nura-js/core/wake';
+import { parseNumeral } from '@nura-js/core/numerals';
+import { normalizeSynonyms } from '@nura-js/core/synonyms';
+import { ContextManager } from '@nura-js/core/context';
 
 const text = stripWake('ok nora open orders menu', {
   aliases: ['nora', 'lura', 'nula'],
@@ -59,11 +59,11 @@ const next = ctx.maybeConfirm('sí, elimínala');
 
 ## Modules
 
-- **@nura/core** — Wake helpers, numerals, synonyms, and context manager.
-- **@nura/intents** — Intent → Approval → Execute flows with JSON Schema validation.
-- **@nura/transport-http** — Secure HTTP surface with rate limiting and hardened endpoints.
-- **@nura/client** — Unified SDK + dispatcher for UI reactions.
-- **@nura/react | @nura/vue | @nura/svelte** — Framework adapters tuned for conversational UX.
+- **@nura-js/core** — Wake helpers, numerals, synonyms, and context manager.
+- **@nura-js/intents** — Intent → Approval → Execute flows with JSON Schema validation.
+- **@nura-js/transport-http** — Secure HTTP surface with rate limiting and hardened endpoints.
+- **@nura-js/client** — Unified SDK + dispatcher for UI reactions.
+- **@nura-js/react | @nura-js/vue | @nura-js/svelte** — Framework adapters tuned for conversational UX.
 
 ## Docs & Community
 

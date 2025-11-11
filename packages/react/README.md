@@ -1,18 +1,18 @@
-# @nura/react
+# @nura-js/react
 
 Official React adapter for consuming the Nura.js runtime with declarative components and hooks.
 
 ## Installation
 
 ```bash
-pnpm add @nura/react
+pnpm add @nura-js/react
 ```
 
 ## Usage Example
 
 ```tsx
-import { createRegistry } from '@nura/core';
-import { NuraProvider, useNuraAction } from '@nura/react';
+import { createRegistry } from '@nura-js/core';
+import { NuraProvider, useNuraAction } from '@nura-js/react';
 
 const registry = createRegistry({
   // define actions and agents

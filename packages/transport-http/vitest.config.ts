@@ -11,8 +11,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@nurajs/intents': resolve(__dirname, '../intents/src/index.ts'),
-      '@nura/intents': resolve(__dirname, '../intents/src/index.ts'),
+      '@nura-js/intents': resolve(__dirname, '../intents/src/index.ts'),
     },
   },
 });

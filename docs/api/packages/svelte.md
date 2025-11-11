@@ -1,13 +1,13 @@
-# @nura/svelte
+# @nura-js/svelte
 
 Svelte adapter for Nura.js - Make your Svelte apps AI-friendly.
 
 ## Installation
 
 \`\`\`bash
-npm install @nura/svelte @nura/core @nura/dom
+npm install @nura-js/svelte @nura-js/core @nura-js/dom
 # or
-pnpm add @nura/svelte @nura/core @nura/dom
+pnpm add @nura-js/svelte @nura-js/core @nura-js/dom
 \`\`\`
 
 ## Usage
@@ -16,7 +16,7 @@ pnpm add @nura/svelte @nura/core @nura/dom
 
 \`\`\`svelte
 <script>
-  import { NuraProvider } from '@nura/svelte'
+  import { NuraProvider } from '@nura-js/svelte'
 </script>
 
 <NuraProvider config={{ debug: true }}>
@@ -28,7 +28,7 @@ Or initialize manually:
 
 \`\`\`svelte
 <script>
-  import { initNura } from '@nura/svelte'
+  import { initNura } from '@nura-js/svelte'
   
   initNura({ debug: true })
 </script>
@@ -38,7 +38,7 @@ Or initialize manually:
 
 \`\`\`svelte
 <script>
-  import { useNuraAction } from '@nura/svelte'
+  import { useNuraAction } from '@nura-js/svelte'
 
   useNuraAction({
     verb: 'open',
@@ -54,7 +54,7 @@ Or initialize manually:
 
 \`\`\`svelte
 <script>
-  import { nura } from '@nura/svelte'
+  import { nura } from '@nura-js/svelte'
 </script>
 
 <div use:nura={{ scope: 'form', listen: ['submit'] }}>
@@ -68,7 +68,7 @@ Or initialize manually:
 
 \`\`\`svelte
 <script>
-  import { NuraElement } from '@nura/svelte'
+  import { NuraElement } from '@nura-js/svelte'
 </script>
 
 <NuraElement scope="form" listen={['submit']}>
@@ -82,7 +82,7 @@ Or initialize manually:
 
 \`\`\`svelte
 <script>
-  import { createNuraStore } from '@nura/svelte'
+  import { createNuraStore } from '@nura-js/svelte'
 
   const { actions, elements } = createNuraStore()
 </script>

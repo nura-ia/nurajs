@@ -1,4 +1,4 @@
-# @nurajs/client
+# @nura-js/client
 **Purpose:** Provide an agnostic way to talk to Nura and react to UI-layer outcomes.
 
 ## API

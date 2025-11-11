@@ -1,13 +1,13 @@
-# @nura/vue
+# @nura-js/vue
 
 > Official Vue 3 adapter for rendering Nura.js metadata and wiring runtime actions.
 
 ## Installation
 
 ```bash
-pnpm add @nura/vue @nura/core vue
+pnpm add @nura-js/vue @nura-js/core vue
 # or
-yarn add @nura/vue @nura/core vue
+yarn add @nura-js/vue @nura-js/core vue
 ```
 
 ## Quick Start
@@ -15,8 +15,8 @@ yarn add @nura/vue @nura/core vue
 ```ts
 import { createApp } from 'vue'
 import App from './App.vue'
-import { createRegistry, Nura } from '@nura/core'
-import { withVue } from '@nura/vue'
+import { createRegistry, Nura } from '@nura-js/core'
+import { withVue } from '@nura-js/vue'
 
 const registry = createRegistry({
   config: { app: { id: 'demo-nura' } },
@@ -66,7 +66,7 @@ compiler flags.
 
 ## Dependencies
 
-- Internal: `@nura/core`.
+- Internal: `@nura-js/core`.
 - Peer: Vue 3 (`>=3.3.0`).
 
 ## Status

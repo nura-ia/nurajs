@@ -18,7 +18,7 @@ export default defineComponent({
       default: () => [],
     },
     meta: {
-      type: Object as PropType<Record<string, unknown>>, 
+      type: Object as PropType<Record<string, unknown>>,
       default: () => ({}),
     },
     as: {

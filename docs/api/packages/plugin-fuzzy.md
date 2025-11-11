@@ -1,19 +1,19 @@
-# @nura/plugin-fuzzy
+# @nura-js/plugin-fuzzy
 
 > Locale-aware fuzzy string utilities used across the Nura.js ecosystem.
 
 ## Installation
 
 ```bash
-pnpm add @nura/plugin-fuzzy
+pnpm add @nura-js/plugin-fuzzy
 # or
-yarn add @nura/plugin-fuzzy
+yarn add @nura-js/plugin-fuzzy
 ```
 
 ## Usage
 
 ```ts
-import { matchFuzzy } from '@nura/plugin-fuzzy'
+import { matchFuzzy } from '@nura-js/plugin-fuzzy'
 
 const result = matchFuzzy('open the cart', ['open the cart', 'close the cart'])
 

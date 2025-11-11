@@ -11,11 +11,11 @@ Nura.js is a modular framework that layers semantic intelligence on top of moder
 
 ## Package Map
 
-- **@nura/core** – Command registry, lexicon model, context management, and intent resolution.
-- **@nura/dom** – DOM indexer/scanner that keeps the semantic graph in sync with rendered elements.
-- **@nura/react / @nura/vue / @nura/svelte** – Framework bindings that expose hooks, composables, and actions.
-- **@nura/plugin-voice** – Speech recognition and synthesis helpers that bridge voice input with commands.
-- **@nura/devtools-lexicon** – Developer tooling (overlays, inspectors, lexicon visualizers).
+- **@nura-js/core** – Command registry, lexicon model, context management, and intent resolution.
+- **@nura-js/dom** – DOM indexer/scanner that keeps the semantic graph in sync with rendered elements.
+- **@nura-js/react / @nura-js/vue / @nura-js/svelte** – Framework bindings that expose hooks, composables, and actions.
+- **@nura-js/plugin-voice** – Speech recognition and synthesis helpers that bridge voice input with commands.
+- **@nura-js/devtools-lexicon** – Developer tooling (overlays, inspectors, lexicon visualizers).
 
 ## Flows
 

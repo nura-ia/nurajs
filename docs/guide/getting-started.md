@@ -11,23 +11,23 @@ Welcome to Nura.js! This guide walks you through installing dependencies, bootst
 ## Install the Core Package
 
 ```bash
-pnpm add @nura/core
+pnpm add @nura-js/core
 ```
 
 Optional packages:
 
-- Voice tools: `pnpm add @nura/plugin-voice`
-- Fuzzy helpers: `pnpm add @nura/plugin-fuzzy`
-- React adapter: `pnpm add @nura/react`
-- Vue adapter: `pnpm add @nura/vue`
-- Svelte adapter: `pnpm add @nura/svelte`
+- Voice tools: `pnpm add @nura-js/plugin-voice`
+- Fuzzy helpers: `pnpm add @nura-js/plugin-fuzzy`
+- React adapter: `pnpm add @nura-js/react`
+- Vue adapter: `pnpm add @nura-js/vue`
+- Svelte adapter: `pnpm add @nura-js/svelte`
 
 ## Initialize Nura.js
 
 Create an entry point that sets up the provider for your app. Example using React:
 
 ```tsx
-import { NuraProvider } from '@nura/react'
+import { NuraProvider } from '@nura-js/react'
 import { createRoot } from 'react-dom/client'
 import App from './App'
 
@@ -43,7 +43,7 @@ createRoot(document.getElementById('root')!).render(
 Commands connect structured intents to executable logic.
 
 ```tsx
-import { useNuraCommand } from '@nura/react'
+import { useNuraCommand } from '@nura-js/react'
 
 export function CheckoutButton() {
   useNuraCommand('checkout', ({ context }) => {
@@ -61,11 +61,11 @@ export function CheckoutButton() {
 
 ## Connect AI intents to the UI
 
-Bridge your automation flow with [`@nurajs/intents`](../modules/intents.md), [`@nurajs/transport-http`](../modules/transport-http.md), and [`@nurajs/client`](../modules/client.md).
+Bridge your automation flow with [`@nura-js/intents`](../modules/intents.md), [`@nura-js/transport-http`](../modules/transport-http.md), and [`@nura-js/client`](../modules/client.md).
 
 ```ts
 // intents/orders.ts
-import { registerType } from '@nurajs/intents'
+import { registerType } from '@nura-js/intents'
 
 registerType({
   type: 'orders.create',
@@ -76,13 +76,13 @@ registerType({
 
 ```ts
 // http/ai.ts
-import { buildRouter } from '@nurajs/transport-http'
+import { buildRouter } from '@nura-js/transport-http'
 export const aiRouter = buildRouter({ limits: { body: '64kb' } })
 ```
 
 ```ts
 // client
-import { AiClient, UiDispatcher } from '@nurajs/client'
+import { AiClient, UiDispatcher } from '@nura-js/client'
 const client = new AiClient('/ai')
 const dispatcher = new UiDispatcher()
 

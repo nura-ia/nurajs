@@ -1,4 +1,4 @@
-# @nurajs/transport-http
+# @nura-js/transport-http
 **Purpose:** A hardened HTTP interface that exposes Nura’s intent surface.
 
 ## Endpoints
@@ -15,7 +15,7 @@
 
 ## Usage
 ```ts
-import { buildRouter } from '@nurajs/transport-http'
+import { buildRouter } from '@nura-js/transport-http'
 export const aiRouter = buildRouter({
   cors: { origins: ['https://yourapp.com'] },
   limits: { body: '64kb' },

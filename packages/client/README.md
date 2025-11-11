@@ -1,17 +1,17 @@
-# @nurajs/client
+# @nura-js/client
 
 Interact with the Nura AI intent surface from any UI or automation client.
 
 ## Installation
 
 ```bash
-pnpm add @nurajs/client
+pnpm add @nura-js/client
 ```
 
 ## Usage Example
 
 ```ts
-import { AiClient, UiDispatcher } from '@nurajs/client'
+import { AiClient, UiDispatcher } from '@nura-js/client'
 
 const client = new AiClient('https://api.example.com/ai')
 const dispatcher = new UiDispatcher()
@@ -26,4 +26,4 @@ await client.approveIntent(id)
 dispatcher.dispatch(await client.getIntentResult(id))
 ```
 
-See [`@nurajs/intents`](../../docs/modules/intents.md) and [`@nurajs/transport-http`](../../docs/modules/transport-http.md) for server-side integration.
+See [`@nura-js/intents`](../../docs/modules/intents.md) and [`@nura-js/transport-http`](../../docs/modules/transport-http.md) for server-side integration.

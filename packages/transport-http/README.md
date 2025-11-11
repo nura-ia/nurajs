@@ -1,19 +1,19 @@
-# @nurajs/transport-http
+# @nura-js/transport-http
 
 Expose the Nura intent service over hardened HTTP endpoints with JSON-only enforcement, idempotency, and rate limiting.
 
 ## Installation
 
 ```bash
-pnpm add @nurajs/transport-http
+pnpm add @nura-js/transport-http
 ```
 
 ## Usage Example
 
 ```ts
 import express from 'express'
-import { registerType } from '@nurajs/intents'
-import { buildRouter } from '@nurajs/transport-http'
+import { registerType } from '@nura-js/intents'
+import { buildRouter } from '@nura-js/transport-http'
 
 registerType({
   type: 'orders.create',

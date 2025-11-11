@@ -4,8 +4,8 @@
 
 - Tooling: `.eslintrc.cjs`, `.prettierrc.json`, `typedoc.json`, `package.json` scripts.
 - Documentation: root `README.md`, new `CHANGELOG.md`, `RELEASING.md`, package
-  READMEs for `@nura/core`, `@nura/plugin-voice`, `@nura/plugin-fuzzy`, and
-  `@nura/vue`.
+  READMEs for `@nura-js/core`, `@nura-js/plugin-voice`, `@nura-js/plugin-fuzzy`, and
+  `@nura-js/vue`.
 - Build configs: `rollup.config.js` and `tsconfig.build.json` for core, voice,
   fuzzy, and vue packages.
 - Source updates: `packages/core/src/*` telemetry, lexicon, i18n, actions;

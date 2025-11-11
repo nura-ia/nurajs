@@ -7,7 +7,7 @@ Practical examples for agent-aware interfaces built with Nura.js.
 ## Register an Action with Slots
 
 ```ts
-import { createRegistry, defineActionSpec } from '@nura/core';
+import { createRegistry, defineActionSpec } from '@nura-js/core';
 
 export const registry = createRegistry({
   actions: [
@@ -41,7 +41,7 @@ export const registry = createRegistry({
 ## Normalize Synonyms by Locale
 
 ```ts
-import { normalizeSynonyms } from '@nura/core/synonyms';
+import { normalizeSynonyms } from '@nura-js/core/synonyms';
 
 const normalized = normalizeSynonyms('abre el menú de pedidos', 'es');
 // → "abre el menú de órdenes"
@@ -50,7 +50,7 @@ const normalized = normalizeSynonyms('abre el menú de pedidos', 'es');
 ## Parse Numerals inside Commands
 
 ```ts
-import { parseNumeral } from '@nura/core/numerals';
+import { parseNumeral } from '@nura-js/core/numerals';
 
 const quantity = parseNumeral('quince', 'es');
 // quantity === 15
@@ -59,7 +59,7 @@ const quantity = parseNumeral('quince', 'es');
 ## Rank Intents with Fuzzy Helpers
 
 ```ts
-import { rankCandidates } from '@nura/plugin-fuzzy';
+import { rankCandidates } from '@nura-js/plugin-fuzzy';
 
 const intents = [
   { id: 'open.orders', phrase: 'abre el menú de órdenes' },
@@ -79,8 +79,8 @@ if (best?.score && best.score >= 0.8) {
 ## Wire the Voice Agent
 
 ```ts
-import { createRegistry, defineActionSpec } from '@nura/core';
-import { voiceAgent } from '@nura/plugin-voice';
+import { createRegistry, defineActionSpec } from '@nura-js/core';
+import { voiceAgent } from '@nura-js/plugin-voice';
 
 const registry = createRegistry({
   actions: [
@@ -105,11 +105,11 @@ registry.agents.start('voice', {
 ## Highlight Annotated Elements
 
 ```ts
-import { DOMIndexer } from '@nura/dom';
+import { DOMIndexer } from '@nura-js/dom';
 
 const indexer = new DOMIndexer({ autoScan: true });
 console.log(indexer.getAll().map(el => el.dataset.nuAct));
 ```
 
-Pair these snippets with the adapters in `@nura/react`, `@nura/vue`, and `@nura/svelte` to connect DOM metadata with agent
+Pair these snippets with the adapters in `@nura-js/react`, `@nura-js/vue`, and `@nura-js/svelte` to connect DOM metadata with agent
 handlers.

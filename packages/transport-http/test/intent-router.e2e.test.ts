@@ -12,7 +12,7 @@ import {
   NoopRateLimiter,
   type RateLimiter,
   SimplePolicyEngine,
-} from '@nurajs/intents';
+} from '@nura-js/intents';
 import { buildRouter } from '../src/router.js';
 
 describe('createIntentRouter', () => {

@@ -6,5 +6,5 @@
   "linked": [],
   "access": "public",
   "baseBranch": "main",
-  "ignore": ["@nura/examples", "@nura/devtools-lexicon"]
+  "ignore": ["@nura-js/examples", "@nura-js/devtools-lexicon"]
 }

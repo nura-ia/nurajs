@@ -1,19 +1,19 @@
-# @nura/core
+# @nura-js/core
 
 > Core runtime for building AI-friendly command layers with Nura.js.
 
 ## Installation
 
 ```bash
-pnpm add @nura/core
+pnpm add @nura-js/core
 # or
-npm install @nura/core
+npm install @nura-js/core
 ```
 
 ## Quick Start
 
 ```ts
-import { Nura, createRegistry } from '@nura/core'
+import { Nura, createRegistry } from '@nura-js/core'
 
 const registry = createRegistry({
   config: {
@@ -95,7 +95,7 @@ co-located under `dist/`.
 
 ## Dependencies
 
-- Internal: `@nura/plugin-fuzzy` (semantic search helpers).
+- Internal: `@nura-js/plugin-fuzzy` (semantic search helpers).
 - Peer: none.
 
 ## Status
