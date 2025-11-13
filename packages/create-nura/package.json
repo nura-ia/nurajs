@@ -1,0 +1,32 @@
+{
+  "name": "@nura-js/create-nura",
+  "version": "0.1.0",
+  "description": "CLI to scaffold Nura projects in seconds.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "create-nura": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --shims --banner.js='#!/usr/bin/env node'",
+    "clean": "rimraf dist",
+    "lint": "eslint 'src/**/*.ts'",
+    "test": "vitest run",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
+  },
+  "keywords": [
+    "scaffold",
+    "nura",
+    "cli"
+  ],
+  "engines": {
+    "node": ">=18.18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

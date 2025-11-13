@@ -1,0 +1,19 @@
+{
+  "name": "__APP_NAME__",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "tsup src/main.ts --format esm --dts",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "@nura-js/core": "^0.1.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.9.3"
+  }
+}

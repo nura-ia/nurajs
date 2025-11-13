@@ -1,0 +1,17 @@
+{
+  "name": "@nura-js/example-node-min",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "start": "tsx src/main.ts"
+  },
+  "dependencies": {
+    "@nura-js/core": "workspace:*",
+    "tsx": "^4.16.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

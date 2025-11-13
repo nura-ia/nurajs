@@ -1,92 +1,25 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM"],
     "module": "ES2020",
-    "moduleResolution": "bundler",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
-    "allowJs": false,
-    "checkJs": false,
-    "jsx": "preserve",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "isolatedModules": true,
     "declaration": true,
-    "baseUrl": ".",
+    "sourceMap": true,
+    "types": [],
     "paths": {
-      "@nura-js/core": [
-        "packages/core/types/index.d.ts"
-      ],
-      "@nura-js/core/*": [
-        "packages/core/types/*"
-      ],
-      "@nura-js/dom": [
-        "packages/dom/types/index.d.ts"
-      ],
-      "@nura-js/dom/*": [
-        "packages/dom/types/*"
-      ],
-      "@nura-js/react": [
-        "packages/react/types/index.d.ts"
-      ],
-      "@nura-js/react/*": [
-        "packages/react/types/*"
-      ],
-      "@nura-js/vue": [
-        "packages/vue/types/index.d.ts"
-      ],
-      "@nura-js/vue/*": [
-        "packages/vue/types/*"
-      ],
-      "@nura-js/svelte": [
-        "packages/svelte/types/index.d.ts"
-      ],
-      "@nura-js/svelte/*": [
-        "packages/svelte/types/*"
-      ],
-      "@nura-js/plugin-voice": [
-        "packages/plugin-voice/types/index.d.ts"
-      ],
-      "@nura-js/plugin-voice/*": [
-        "packages/plugin-voice/types/*"
-      ],
-      "@nura-js/plugin-fuzzy": [
-        "packages/plugin-fuzzy/types/index.d.ts"
-      ],
-      "@nura-js/plugin-fuzzy/*": [
-        "packages/plugin-fuzzy/types/*"
-      ],
-      "@nura-js/intents": [
-        "packages/intents/src/index.ts"
-      ],
-      "@nura-js/transport-http": [
-        "packages/transport-http/src/index.ts"
-      ],
-      "@nura-js/client": [
-        "packages/client/src/index.ts"
-      ],
-      "@nura-js/devtools-lexicon": [
-        "packages/devtools-lexicon/types/index.d.ts"
-      ],
-      "@nura-js/devtools-lexicon/*": [
-        "packages/devtools-lexicon/types/*"
-      ]
+      "@nura-js/core": ["packages/core/src/index.ts"],
+      "@nura-js/client": ["packages/client/src/index.ts"],
+      "@nura-js/client/*": ["packages/client/src/*"],
+      "@nura-js/plugin-voice": ["packages/plugin-voice/src/index.ts"],
+      "@nura-js/create-nura": ["packages/create-nura/src/index.ts"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "dist",
-    ".next",
-    "coverage"
-  ]
+  "exclude": ["node_modules", "dist", "coverage"]
 }
